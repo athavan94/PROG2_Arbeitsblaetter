@@ -1,0 +1,24 @@
+﻿Aufgabe 2
+
+Erstellen Sie ein Konstrukt, welche eine Superklasse und drei vererbte Subklassen enthält.
+Dabei müssen folgende Anforderungen erfüllt sein:
+
+› Entscheid Sie selber, ob die Superklasse abstract ist oder nicht. 
+	Begründen Sie die Auswahl in einem kurzen Text! (Theoriepunkt)
+
+	=> Dient als Vorgabe für einen Bereich. 
+	   Die wichtigste Eigenschaft ist, dass man Methoden deklarieren kann, die zwingend in jeder Vererbung vorhanden sein müssen.
+	   So kann man sicherstellen, dass jede Vererbung die notwendigen Methoden überschreiben.
+
+› Mindestens eine Methode soll virtual sein und in einer Subklasse überschrieben werden
+› Mindestens eine Methode soll nicht virtual sein
+› In der Superklasse soll mindestens eine Eigenschaft private sein und auch verwendet werden
+
+Typische Beispiele für vererbte Klassen sind:
+› Personen (Kunden, Lieferanten, Interessenten)
+› Tiere (Haustiere, Wildtiere usw.)
+› Artikel (physische Artikel, Miete, Gutscheine usw.)
+› Fahrzeuge (Auto, Motorrad, Velo usw.)
+
+Natürlich ist es noch besser, wenn Sie ein komplett eigenes Beispiel erfinden! Achten Sie
+darauf, dass Prozesse vorhanden sind, welche als Methoden implementiert werden können.

@@ -1,0 +1,10 @@
+﻿Erstellen Sie eine neue Klasse, die eine Methode enthält, welche in 3 Ausprägungen (3
+Versionen) vorkommt durch Überladung. (Siehe Beispiel S. 3)
+
+Ideen:
+- Umfrage.StelleFrage("Frage 1", "Wie heisst dein Haustier?")
+- Umfrage.StelleFrage("Frage 1", "Wie heisst dein Haustier?", false)
+	// false = keine Pflichtfrage
+- Umfrage.StelleFrage("Frage 1", "Wie heisst dein Haustier?", "Bitte Eingabe machen", "^[a-z]+$")
+
+Die Methode soll den eingegebenen Text als String zurückgeben.
