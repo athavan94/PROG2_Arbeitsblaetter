@@ -1,0 +1,5 @@
+﻿Entwerfen Sie eine eigene Schnittstelle, sie muss nicht riesig sein. 
+Erstellen Sie dann mindestens zwei Klassen, welche diese Schnittstelle implementieren. 
+Wenden Sie diese beiden Klassen an, indem Sie diese per Schnittstelle ansprechen.
+
+Sie können auch eine Schnittstelle für die Klassen aus Aufgabe 2 definieren.

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_2
+namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
 {
-    abstract class InformatikAbteilung
+    abstract class InformatikAbteilung: IMeineAufgabe // Verstehe nicht wie das angewendet werden soll. -> ABKLÄHREN
     {
         public string Name { get; set; }
         public string Rolle { get; set; }
-        private string Firma { get; set; } //Verstehe nicht für was diese private Methode gut sein soll. -> ABKLÄHREN
+        private string Firma { get; set; }
 
         public InformatikAbteilung()
         {
