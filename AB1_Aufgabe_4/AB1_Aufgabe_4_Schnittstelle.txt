@@ -1,0 +1,2 @@
+﻿Suchen Sie sich auf Seite 15/16 eine bestehende Schnittstelle von C# aus und nutzen diese mit
+Objekten, welche diese implementieren. (Ja, eigene Nachforschungen sind notwendig)

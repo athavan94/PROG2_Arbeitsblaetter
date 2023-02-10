@@ -13,7 +13,6 @@ namespace PROG2_Arbeitsblaetter
         {
             // AB1 Aufgabe 5
 
-            /*
             List<IVorstellungA5> liste = new List<IVorstellungA5>()
             {
                 new LeiterFinanzenA5 {Name = "Cedric Meier", Age = 45},
@@ -31,10 +30,10 @@ namespace PROG2_Arbeitsblaetter
 
                 Console.WriteLine();
             }
-            */
 
             // AB1 Aufgabe 4
 
+            /*
             List<IVorstellungA4> liste = new List<IVorstellungA4>()
             {
                 new LeiterFinanzenA4 {Name = "Cedric Meier", date = new DateTime(1985, 11, 02)},
@@ -50,6 +49,7 @@ namespace PROG2_Arbeitsblaetter
 
                 Console.WriteLine();
             }
+            */
 
             // AB1 Aufgabe 3
 

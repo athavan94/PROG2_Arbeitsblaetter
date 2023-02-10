@@ -1,0 +1,3 @@
+﻿Schreiben Sie selber eine Klasse, welche eine der bestehenden Schnittstellen von Seite 15/16
+implementiert. Wenden Sie dann eine Methode dieser Schnittstelle in einem praxisnahen
+Beispiel an!
