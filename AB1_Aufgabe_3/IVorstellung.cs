@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
 {
-    interface IMeineAufgabe
+    interface IVorstellung
     {
-        void MeineAufgaben();
+        void Vorstellen();
     }
 }

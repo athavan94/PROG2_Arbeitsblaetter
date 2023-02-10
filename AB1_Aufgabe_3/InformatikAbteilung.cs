@@ -6,77 +6,52 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
 {
-    abstract class InformatikAbteilung: IMeineAufgabe // Verstehe nicht wie das angewendet werden soll. -> ABKLÄHREN
+    abstract class InformatikAbteilung: Abteilung
     {
-        public string Name { get; set; }
-        public string Rolle { get; set; }
-        private string Firma { get; set; }
-
-        public InformatikAbteilung()
-        {
-            Firma = "FIVE Informatik AG";
-            Console.WriteLine(Firma);
-        }
-
-        /// <summary>
-        /// Diese Methode muss überschrieben werden.
-        /// </summary>
-        public abstract void MeineAufgaben();
-
-        /// <summary>
-        /// Diese Methode kann bei der Vererbung überschreiben werden.
-        /// </summary>
-        public virtual void Vorstellen()
-        {
-            Console.WriteLine("Mein Name ist " + Name + ".");
-            Console.WriteLine("Ich bin ein " + Rolle + ".");
-        }
+        public string ProjektName { get; set; }
     }
 
-    class TeamLeiter : InformatikAbteilung
+    class TeamLeiter3 : InformatikAbteilung
     {
-        public TeamLeiter()
+        public TeamLeiter3()
         {
             this.Rolle = "Team Leiter";
         }
 
-        public override void Vorstellen()
+        public override void Beschreibung()
         {
-            Console.WriteLine();
-            Console.WriteLine("Bitte stellt euch alle kurz vor.");
-            Console.WriteLine();
-            base.Vorstellen();
-        }
-
-        public override void MeineAufgaben()
-        {
+            Vorstellen();
             Console.WriteLine("Ich führe das Team und informiere über Neuigkeiten.");
         }
     }
 
-    class ProductOwner : InformatikAbteilung
+    class ProductOwner3 : InformatikAbteilung
     {
-        public ProductOwner()
+        public ProductOwner3()
         {
             this.Rolle = "ProductOwner";
         }
 
-        public override void MeineAufgaben()
+        public override void Beschreibung()
         {
+            Vorstellen();
             Console.WriteLine("Ich bin verantwortlich für das Produkt und entscheide was entwickelt werden soll.");
         }
     }
 
-    class Softwareentwickler : InformatikAbteilung
+    class Softwareentwickler3 : InformatikAbteilung
     {
-        public Softwareentwickler()
+        public Softwareentwickler3()
         {
             this.Rolle = "Softwareentwickler";
+            this.ProjektName = "Webflow 4";
         }
 
-        public override void MeineAufgaben()
+        public override void Beschreibung()
         {
+            Vorstellen();
             Console.WriteLine("Ich bin für die Entwicklung des Produktes zuständig.");
+            Console.WriteLine("Ich arbeite zur Zeit am Produkt " + ProjektName + ".");
         }
     }
 }
