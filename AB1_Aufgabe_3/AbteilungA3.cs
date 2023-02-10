@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
 {
-    abstract class Abteilung: IVorstellung
+    abstract class AbteilungA3: IVorstellungA3
     {
         public string Name;
         public string Rolle;

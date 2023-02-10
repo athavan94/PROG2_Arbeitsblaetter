@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
+namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
 {
-    abstract class InformatikAbteilung: Abteilung
+    abstract class InformatikAbteilungA4: AbteilungA4
     {
         public string ProjektName { get; set; }
     }
 
-    class TeamLeiter3 : InformatikAbteilung
+    class TeamLeiterA4 : InformatikAbteilungA4
     {
-        public TeamLeiter3()
+        public TeamLeiterA4()
         {
             this.Rolle = "Team Leiter";
         }
@@ -25,9 +25,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
         }
     }
 
-    class ProductOwner3 : InformatikAbteilung
+    class ProductOwnerA4 : InformatikAbteilungA4
     {
-        public ProductOwner3()
+        public ProductOwnerA4()
         {
             this.Rolle = "ProductOwner";
         }
@@ -39,9 +39,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
         }
     }
 
-    class Softwareentwickler3 : InformatikAbteilung
+    class SoftwareentwicklerA4 : InformatikAbteilungA4
     {
-        public Softwareentwickler3()
+        public SoftwareentwicklerA4()
         {
             this.Rolle = "Softwareentwickler";
             this.ProjektName = "Webflow 4";

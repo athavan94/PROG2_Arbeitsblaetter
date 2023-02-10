@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
+namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
 {
-    interface IVorstellung
+    interface IVorstellungA4
     {
         void Vorstellen();
     }

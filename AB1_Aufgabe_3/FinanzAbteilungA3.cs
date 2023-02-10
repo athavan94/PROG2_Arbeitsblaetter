@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
 {
-    abstract class FinanzAbteilung: Abteilung
+    abstract class FinanzAbteilungA3: AbteilungA3
     {
         public int Erfahrung { get; set; }
     }
 
-    class LeiterFinanzen : FinanzAbteilung
+    class LeiterFinanzenA3 : FinanzAbteilungA3
     {
-        public LeiterFinanzen()
+        public LeiterFinanzenA3()
         {
             this.Rolle = "Leiter Finanzen";
             this.Erfahrung = 5;
@@ -27,9 +27,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_3
         }
     }
 
-    class Verkäufer : FinanzAbteilung
+    class VerkäuferA3 : FinanzAbteilungA3
     {
-        public Verkäufer()
+        public VerkäuferA3()
         {
             this.Rolle = "Verkäufer";
             this.Erfahrung = 3;

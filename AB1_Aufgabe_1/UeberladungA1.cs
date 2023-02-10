@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter
 {
-    class Ueberladung
+    class UeberladungA1
     {
         public static int Plus(int number1, int number2)
         {

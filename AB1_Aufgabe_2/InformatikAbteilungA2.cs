@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_2
 {
-    abstract class InformatikAbteilung
+    abstract class InformatikAbteilungA2
     {
         public string Name { get; set; }
         public string Rolle { get; set; }
         private string Firma { get; set; } //Verstehe nicht für was diese private Methode gut sein soll. -> ABKLÄHREN
 
-        public InformatikAbteilung()
+        public InformatikAbteilungA2()
         {
             Firma = "FIVE Informatik AG";
             Console.WriteLine(Firma);
@@ -33,9 +33,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_2
         }
     }
 
-    class TeamLeiter : InformatikAbteilung
+    class TeamLeiterA2 : InformatikAbteilungA2
     {
-        public TeamLeiter()
+        public TeamLeiterA2()
         {
             this.Rolle = "Team Leiter";
         }
@@ -54,9 +54,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_2
         }
     }
 
-    class ProductOwner : InformatikAbteilung
+    class ProductOwnerA2 : InformatikAbteilungA2
     {
-        public ProductOwner()
+        public ProductOwnerA2()
         {
             this.Rolle = "ProductOwner";
         }
@@ -67,9 +67,9 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_2
         }
     }
 
-    class Softwareentwickler : InformatikAbteilung
+    class SoftwareentwicklerA2 : InformatikAbteilungA2
     {
-        public Softwareentwickler()
+        public SoftwareentwicklerA2()
         {
             this.Rolle = "Softwareentwickler";
         }

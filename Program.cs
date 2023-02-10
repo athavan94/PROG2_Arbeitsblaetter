@@ -20,21 +20,21 @@ namespace PROG2_Arbeitsblaetter
             // AB1 Aufgabe 2
 
             /*
-            TeamLeiter teamLeiter = new TeamLeiter();
-            ProductOwner productOwner = new ProductOwner();
-            Softwareentwickler softwareentwickler = new Softwareentwickler();
+            TeamLeiterA2 teamLeiter = new TeamLeiterA2();
+            ProductOwnerA2 productOwner = new ProductOwnerA2();
+            SoftwareentwicklerA2 softwareentwickler = new SoftwareentwicklerA2();
 
             teamLeiter.Name = "Marco Müller";
             productOwner.Name = "Nicola Schmid";
             softwareentwickler.Name = "Marcel Zimmermann";
 
-            List<InformatikAbteilung> liste = new List<InformatikAbteilung>();
+            List<InformatikAbteilungA2> liste = new List<InformatikAbteilungA2>();
 
             liste.Add(teamLeiter);
             liste.Add(productOwner);
             liste.Add(softwareentwickler);
 
-            foreach(InformatikAbteilung informatikAbteilung in liste)
+            foreach(InformatikAbteilungA2 informatikAbteilung in liste)
             {
                 informatikAbteilung.Vorstellen();
                 informatikAbteilung.MeineAufgaben();
@@ -45,29 +45,31 @@ namespace PROG2_Arbeitsblaetter
 
             // AB1 Aufgabe 3
 
-            LeiterFinanzen leiterFinanzen = new LeiterFinanzen();
-            Verkäufer verkäufer = new Verkäufer();
-            TeamLeiter3 teamLeiter = new TeamLeiter3();
-            Softwareentwickler3 softwareentwickler = new Softwareentwickler3();
+            /*
+            LeiterFinanzenA3 leiterFinanzen = new LeiterFinanzenA3();
+            VerkäuferA3 verkäufer = new VerkäuferA3();
+            TeamLeiterA3 teamLeiter = new TeamLeiterA3();
+            SoftwareentwicklerA3 softwareentwickler = new SoftwareentwicklerA3();
 
             leiterFinanzen.Name = "Cedric Meier";
             verkäufer.Name = "Arton Blasi";
             teamLeiter.Name = "Marco Müller";
             softwareentwickler.Name = "Marcel Zimmermann";
 
-            List<IVorstellung> liste = new List<IVorstellung>();
+            List<IVorstellungA3> liste = new List<IVorstellungA3>();
 
             liste.Add(leiterFinanzen);
             liste.Add(verkäufer);
             liste.Add(teamLeiter);
             liste.Add(softwareentwickler);
 
-            foreach(Abteilung abteilung in liste)
+            foreach(AbteilungA3 abteilung in liste)
             {
                 abteilung.Beschreibung();
                 
                 Console.WriteLine();
             }
+            */
         }
     }
 }
