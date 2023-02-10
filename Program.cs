@@ -55,7 +55,7 @@ namespace PROG2_Arbeitsblaetter
             teamLeiter.Name = "Marco Müller";
             softwareentwickler.Name = "Marcel Zimmermann";
 
-            List<Abteilung> liste = new List<Abteilung>();
+            List<IVorstellung> liste = new List<IVorstellung>();
 
             liste.Add(leiterFinanzen);
             liste.Add(verkäufer);
