@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
 {
-    interface IVorstellungA4
+    interface IVorstellungA4: IComparable
     {
         void Vorstellen();
     }

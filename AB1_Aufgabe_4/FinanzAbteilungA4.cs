@@ -15,8 +15,8 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public LeiterFinanzenA4()
         {
-            this.Rolle = "Leiter Finanzen";
-            this.Erfahrung = 5;
+            Rolle = "Leiter Finanzen";
+            Erfahrung = 5;
         }
 
         public override void Beschreibung()
@@ -31,8 +31,8 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public VerkäuferA4()
         {
-            this.Rolle = "Verkäufer";
-            this.Erfahrung = 3;
+            Rolle = "Verkäufer";
+            Erfahrung = 3;
         }
 
         public override void Beschreibung()

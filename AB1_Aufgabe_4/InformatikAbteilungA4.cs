@@ -15,7 +15,7 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public TeamLeiterA4()
         {
-            this.Rolle = "Team Leiter";
+            Rolle = "Team Leiter";
         }
 
         public override void Beschreibung()
@@ -29,7 +29,7 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public ProductOwnerA4()
         {
-            this.Rolle = "ProductOwner";
+            Rolle = "ProductOwner";
         }
 
         public override void Beschreibung()
@@ -43,8 +43,8 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public SoftwareentwicklerA4()
         {
-            this.Rolle = "Softwareentwickler";
-            this.ProjektName = "Webflow 4";
+            Rolle = "Softwareentwickler";
+            ProjektName = "Webflow 4";
         }
 
         public override void Beschreibung()
