@@ -10,26 +10,20 @@ namespace PROG2_Arbeitsblaetter.AB1_Aufgabe_4
     {
         public string Name;
         public string Rolle;
-        public int Age;
+        public DateTime date;
 
         public void Vorstellen()
         {
             Console.WriteLine("Mein Name ist " + Name + ".");
             Console.WriteLine("Ich bin ein " + Rolle + ".");
-            Console.WriteLine("Ich bin " + Age + " alt.");
+            Console.WriteLine("Ich habe am " + date.ToString("dd.MM.yyyy") + " Geburtstag.");
         }
 
         public abstract void Beschreibung();
 
-        public int CompareTo(object obj)
+        public int CompareTo(DateTime other)
         {
-            if (obj == null) return 1;
-
-            AbteilungA4 otherAbteilung = obj as AbteilungA4;
-            if (otherAbteilung != null)
-                return Age.CompareTo(otherAbteilung.Age);
-            else
-                throw new ArgumentException("Object is not a Abteilung");
+            return date.CompareTo(other);
         }
     }
 }
