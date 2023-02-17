@@ -14,4 +14,4 @@ Das Ziel dieses Projektes ist eine Sammlung von Informationen über die Spieler d
 Der Ablauf wird sich im laufe des Projektes herauskristalisieren.
 
 ## Klassendiagramm
-![Klassendiagramm](/AB2A_Klassendiagramm.cd "Klassendiagramm")
+![Klassendiagramm](/Klassendiagramm.png "Klassendiagramm")
