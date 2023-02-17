@@ -2,17 +2,20 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using PROG2_Arbeitsblaetter.AB2A_Aufgabe_6;
+using PROG2_Arbeitsblaetter;
 
 #nullable disable
 
 namespace PROG2_Arbeitsblaetter.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20230217110414_DBErstellungNew")]
+    partial class DBErstellungNew
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -70,6 +73,55 @@ namespace PROG2_Arbeitsblaetter.Migrations
                     b.ToTable("Lieferkosten");
                 });
 
+            modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_7.ManchesterUnited", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PlayerID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("PlayerID");
+
+                    b.ToTable("ManchesterUnited");
+                });
+
+            modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_7.Player", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nationalität")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Position")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Vorname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Player");
+                });
+
             modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_6.Kunde", b =>
                 {
                     b.HasOne("PROG2_Arbeitsblaetter.AB2A_Aufgabe_6.Lieferkosten", "Lieferkosten")
@@ -81,9 +133,25 @@ namespace PROG2_Arbeitsblaetter.Migrations
                     b.Navigation("Lieferkosten");
                 });
 
+            modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_7.ManchesterUnited", b =>
+                {
+                    b.HasOne("PROG2_Arbeitsblaetter.AB2A_Aufgabe_7.Player", "Player")
+                        .WithMany("ManchesterUnited")
+                        .HasForeignKey("PlayerID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+                });
+
             modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_6.Lieferkosten", b =>
                 {
                     b.Navigation("Kunden");
+                });
+
+            modelBuilder.Entity("PROG2_Arbeitsblaetter.AB2A_Aufgabe_7.Player", b =>
+                {
+                    b.Navigation("ManchesterUnited");
                 });
 #pragma warning restore 612, 618
         }
