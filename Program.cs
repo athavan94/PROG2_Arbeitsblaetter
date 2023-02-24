@@ -25,8 +25,8 @@ namespace PROG2_Arbeitsblaetter
                 Console.WriteLine("2 - Spieler hinzufügen");
                 Console.WriteLine("3 - Alle Teams anzeigen");
                 Console.WriteLine("4 - Alle Spieler anzeigen");
-                Console.WriteLine("5 - Team löschen");
-                Console.WriteLine("6 - Spieler löschen");
+                Console.WriteLine("5 - Spieler löschen");
+                Console.WriteLine("6 - Team löschen");
                 Console.WriteLine("7 - Team anpassen");
                 Console.WriteLine("8 - Spieler anpassen");
                 Console.WriteLine("9 - Beenden");
@@ -52,10 +52,10 @@ namespace PROG2_Arbeitsblaetter
                             playerController.ShowAllPlayers();
                             break;
                         case 5:
-                            //LöscheTeam();
+                            playerController.DeletePlayer();
                             break;
                         case 6:
-                            //LöscheSpieler();
+                            //LöscheTeam();
                             break;
                         case 7:
                             //PasseTeamAn();

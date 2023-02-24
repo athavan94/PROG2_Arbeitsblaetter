@@ -26,7 +26,7 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
 
             using (var context = new Context())
             {
-                Team team = context.FindByName(teamName);
+                Team team = context.FindTeamByName(teamName);
                 if (team != null)
                 {
                     Player newPlayer = new Player()
@@ -40,6 +40,7 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
 
                     context.Player.Add(newPlayer);
                     context.SaveChanges();
+                    Console.WriteLine("Spieler {0} wurde erstellt.", name);
                 }
                 else
                 {
@@ -67,6 +68,29 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
                 else
                 {
                     Console.WriteLine("Keine Spieler gefunden.");
+                }
+            }
+            Console.WriteLine();
+        }
+
+        public void DeletePlayer()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Geben Sie den Namen des zu löschenden Spielers ein:");
+            string name = Console.ReadLine();
+
+            using (var context = new Context())
+            {
+                Player player = context.FindPlayerByName(name);
+                if (player != null)
+                {
+                    context.Player.Remove(player);
+                    context.SaveChanges();
+                    Console.WriteLine("Spieler mit dem Namen {0} wurde gelöscht.", player.Name);
+                }
+                else
+                {
+                    Console.WriteLine("Spieler mit dem Namen {0} wurde nicht gefunden.", player.Name);
                 }
             }
             Console.WriteLine();

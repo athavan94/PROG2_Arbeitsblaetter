@@ -30,9 +30,14 @@ namespace PROG2_Arbeitsblaetter
                 .OnDelete(DeleteBehavior.Restrict);
         }
 
-        public Team FindByName(string name)
+        public Team FindTeamByName(string name)
         {
             return this.Team.FirstOrDefault(t => t.Name == name);
+        }
+
+        public Player FindPlayerByName(string name)
+        {
+            return this.Player.FirstOrDefault(p => p.Name == name);
         }
     }
 }
