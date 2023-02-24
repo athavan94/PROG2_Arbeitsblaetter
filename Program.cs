@@ -25,10 +25,10 @@ namespace PROG2_Arbeitsblaetter
                 Console.WriteLine("2 - Spieler hinzufügen");
                 Console.WriteLine("3 - Alle Teams anzeigen");
                 Console.WriteLine("4 - Alle Spieler anzeigen");
-                Console.WriteLine("5 - Spieler löschen");
-                Console.WriteLine("6 - Team löschen");
-                Console.WriteLine("7 - Team anpassen");
-                Console.WriteLine("8 - Spieler anpassen");
+                Console.WriteLine("5 - Team anpassen");
+                Console.WriteLine("6 - Spieler anpassen");
+                Console.WriteLine("7 - Spieler löschen");
+                Console.WriteLine("8 - Team löschen");
                 Console.WriteLine("9 - Beenden");
                 Console.WriteLine();
                 Console.Write("Option: ");
@@ -52,16 +52,16 @@ namespace PROG2_Arbeitsblaetter
                             playerController.ShowAllPlayers();
                             break;
                         case 5:
-                            playerController.DeletePlayer();
-                            break;
-                        case 6:
-                            teamController.DeleteTeam();
-                            break;
-                        case 7:
                             teamController.UpdateTeam();
                             break;
+                        case 6:
+                            playerController.UpdatePlayer();
+                            break;
+                        case 7:
+                            playerController.DeletePlayer();
+                            break;
                         case 8:
-                            //PasseSpielerAn();
+                            teamController.DeleteTeam();
                             break;
                         case 9:
                             return;
@@ -75,35 +75,6 @@ namespace PROG2_Arbeitsblaetter
                 }
 
             }
-        }
-
-        static void AddPlayer()
-        {
-            Console.WriteLine();
-            Console.WriteLine("Bitte geben Sie die Daten des neuen Spielers ein:");
-            Console.Write("Name: ");
-            string name = Console.ReadLine();
-            Console.Write("Vorname: ");
-            string vorname = Console.ReadLine();
-            Console.Write("Position: ");
-            string position = Console.ReadLine();
-            Console.Write("Nationalität: ");
-            string nationalitaet = Console.ReadLine();
-
-            Player newPlayer = new Player()
-            {
-                Name = name,
-                Vorname = vorname,
-                Position = position,
-                Nationalität = nationalitaet
-            };
-
-            PlayerController playerController = new PlayerController();
-            //playerController.CreatePlayer(newPlayer);
-
-            Console.WriteLine();
-            Console.WriteLine("Spieler wurde erfolgreich hinzugefügt.");
-            Console.WriteLine();
         }
     }
 }

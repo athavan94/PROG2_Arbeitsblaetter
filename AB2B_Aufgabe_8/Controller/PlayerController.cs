@@ -61,10 +61,10 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
                     Console.WriteLine("Alle Spieler:");
                     foreach (Player player in players)
                     {
-                        Console.WriteLine("ID: {0}, Name: {1}, Vorname: {2}, Position: {3}, Nationalität: {4}, Team: {5}",
+                        Console.WriteLine("ID: {0}, Vorname: {1}, Name: {2}, Position: {3}, Nationalität: {4}, Team: {5}",
                             player.ID,
-                            player.Name,
                             player.Vorname,
+                            player.Name,
                             player.Position,
                             player.Nationalität,
                             player.Team?.Name ?? "Kein Team");
