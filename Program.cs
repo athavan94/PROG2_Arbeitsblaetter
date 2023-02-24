@@ -12,45 +12,68 @@ namespace PROG2_Arbeitsblaetter
 
         static void Main(string[] args)
         {
-            bool continueProgram = true;
+            TeamController teamController = new TeamController();
+            PlayerController playerController = new PlayerController();
 
             Console.WriteLine("AB2B Aufgabe 8");
             Console.WriteLine();
 
-            while (continueProgram)
+            while (true)
             {
-                Console.WriteLine("Bitte wählen Sie eine Aktion aus:");
-                Console.WriteLine("1 - Alle Spieler anzeigen");
+                Console.WriteLine("Bitte wählen Sie eine Option aus:");
+                Console.WriteLine("1 - Team erstellen");
                 Console.WriteLine("2 - Spieler hinzufügen");
-                Console.WriteLine("3 - Spieler löschen");
-                Console.WriteLine("4 - Spieler aktualisieren");
-                Console.WriteLine("5 - Programm beenden");
+                Console.WriteLine("3 - Alle Teams anzeigen");
+                Console.WriteLine("4 - Alle Spieler anzeigen");
+                Console.WriteLine("5 - Team löschen");
+                Console.WriteLine("6 - Spieler löschen");
+                Console.WriteLine("7 - Team anpassen");
+                Console.WriteLine("8 - Spieler anpassen");
+                Console.WriteLine("9 - Beenden");
                 Console.WriteLine();
-                Console.Write("Aktion: ");
+                Console.Write("Option: ");
 
-                string userChoice = Console.ReadLine();
+                string input = Console.ReadLine();
 
-                switch (userChoice)
+                if (int.TryParse(input, out var option))
                 {
-                    case "1":
-                        //ShowAllPlayers();
-                        break;
-                    case "2":
-                        AddPlayer();
-                        break;
-                    case "3":
-                        //DeletePlayer();
-                        break;
-                    case "4":
-                        //UpdatePlayer();
-                        break;
-                    case "5":
-                        continueProgram = false;
-                        break;
-                    default:
-                        Console.WriteLine("Ungültige Eingabe. Bitte wählen Sie eine gültige Option aus.");
-                        break;
+                    switch (option)
+                    {
+                        case 1:
+                            teamController.CreateTeam();
+                            break;
+                        case 2:
+                            //FügeSpielerHinzu();
+                            break;
+                        case 3:
+                            //ZeigeAlleTeams();
+                            break;
+                        case 4:
+                            //ZeigeAlleSpieler();
+                            break;
+                        case 5:
+                            //LöscheTeam();
+                            break;
+                        case 6:
+                            //LöscheSpieler();
+                            break;
+                        case 7:
+                            //PasseTeamAn();
+                            break;
+                        case 8:
+                            //PasseSpielerAn();
+                            break;
+                        case 9:
+                            return;
+                        default:
+                            Console.WriteLine("Ungültige Option.");
+                            break;
+                    }
+                } else
+                {
+                    Console.WriteLine("Ungültige Option.");
                 }
+
             }
         }
 

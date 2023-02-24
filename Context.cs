@@ -24,9 +24,9 @@ namespace PROG2_Arbeitsblaetter
             modelBuilder.Entity<Team>().HasKey(t => t.ID);
             modelBuilder.Entity<Player>().HasKey(p => p.ID);
 
-            modelBuilder.Entity<Team>().HasOne(t => t.Player)
-                .WithMany(p => p.Team)
-                .HasForeignKey(t => t.PlayerID)
+            modelBuilder.Entity<Player>().HasOne(p => p.Team)
+                .WithMany(t => t.Player)
+                .HasForeignKey(p => p.TeamID)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

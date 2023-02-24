@@ -11,7 +11,6 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Model
         public int ID { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public int PlayerID { get; set; }
-        public Player Player { get; set; }
+        public ICollection<Player> Player { get; set; }
     }
 }
