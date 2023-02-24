@@ -49,7 +49,7 @@ namespace PROG2_Arbeitsblaetter
                             teamController.ShowAllTeams();
                             break;
                         case 4:
-                            //ZeigeAlleSpieler();
+                            playerController.ShowAllPlayers();
                             break;
                         case 5:
                             //LöscheTeam();
