@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PROG2_Arbeitsblaetter.AB2A_Aufgabe_6;
-using PROG2_Arbeitsblaetter.AB2A_Aufgabe_7;
+using PROG2_Arbeitsblaetter.AB2B_Aufgabe_8;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +10,7 @@ namespace PROG2_Arbeitsblaetter
 {
     internal class Context : DbContext
     {
-        public DbSet<Kunde> Kunde { get; set; }
-        public DbSet<Lieferkosten> Lieferkosten { get; set; }
-        public DbSet<ManchesterUnited> ManchesterUnited { get; set; }
+        public DbSet<Team> Team { get; set; }
         public DbSet<Player> Player { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -24,20 +21,12 @@ namespace PROG2_Arbeitsblaetter
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Kunde>().HasKey(k => k.ID);
-            modelBuilder.Entity<Lieferkosten>().HasKey(l => l.ID);
-
-            modelBuilder.Entity<Kunde>().HasOne(k => k.Lieferkosten)
-                .WithMany(l => l.Kunden)
-                .HasForeignKey(k => k.LieferkostenID)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            modelBuilder.Entity<ManchesterUnited>().HasKey(m => m.ID);
+            modelBuilder.Entity<Team>().HasKey(t => t.ID);
             modelBuilder.Entity<Player>().HasKey(p => p.ID);
 
-            modelBuilder.Entity<ManchesterUnited>().HasOne(m => m.Player)
-                .WithMany(p => p.ManchesterUnited)
-                .HasForeignKey(m => m.PlayerID)
+            modelBuilder.Entity<Team>().HasOne(t => t.Player)
+                .WithMany(p => p.Team)
+                .HasForeignKey(t => t.PlayerID)
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }
