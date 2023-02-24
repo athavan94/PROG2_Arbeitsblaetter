@@ -46,7 +46,7 @@ namespace PROG2_Arbeitsblaetter
                             playerController.CreatePlayer();
                             break;
                         case 3:
-                            //ZeigeAlleTeams();
+                            teamController.ShowAllTeams();
                             break;
                         case 4:
                             //ZeigeAlleSpieler();
