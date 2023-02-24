@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PROG2_Arbeitsblaetter.AB2B_Aufgabe_8;
+using PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

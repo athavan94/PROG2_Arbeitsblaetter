@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8
+namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Model
 {
     internal class Team
     {

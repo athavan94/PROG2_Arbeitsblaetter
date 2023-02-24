@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8
+namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Model
 {
     internal class Player
     {
-        public Player() { }
         public int ID { get; set; }
         public string Name { get; set; }
         public string Vorname { get; set; }
