@@ -24,7 +24,7 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
             Console.WriteLine("Geben Sie den Namen des Teams ein:");
             string teamName = Console.ReadLine();
 
-            using (var context = new Context())
+            using (Context context = new Context())
             {
                 Team team = context.FindTeamByName(teamName);
                 if (team != null)
@@ -53,16 +53,21 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
         public void ShowAllPlayers()
         {
             Console.WriteLine();
-            using (var context = new Context())
+            using (Context context = new Context())
             {
-                var player = context.Player.Include(p => p.Team).ToList();
-                if (player.Any())
+                List<Player> players = context.Player.Include(p => p.Team).ToList();
+                if (players.Any())
                 {
                     Console.WriteLine("Alle Spieler:");
-                    foreach (var s in player)
+                    foreach (Player player in players)
                     {
                         Console.WriteLine("ID: {0}, Name: {1}, Vorname: {2}, Position: {3}, Nationalität: {4}, Team: {5}",
-                            s.ID, s.Name, s.Vorname, s.Position, s.Nationalität, s.Team?.Name ?? "Kein Team");
+                            player.ID,
+                            player.Name,
+                            player.Vorname,
+                            player.Position,
+                            player.Nationalität,
+                            player.Team?.Name ?? "Kein Team");
                     }
                 }
                 else
@@ -79,7 +84,7 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
             Console.WriteLine("Geben Sie den Namen des zu löschenden Spielers ein:");
             string name = Console.ReadLine();
 
-            using (var context = new Context())
+            using (Context context = new Context())
             {
                 Player player = context.FindPlayerByName(name);
                 if (player != null)
