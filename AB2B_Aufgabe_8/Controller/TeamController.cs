@@ -11,20 +11,21 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
     {
         public void CreateTeam()
         {
+            Console.WriteLine();
             Console.WriteLine("Geben Sie den Namen des Teams ein:");
-            var name = Console.ReadLine();
+            string name = Console.ReadLine();
             Console.WriteLine("Geben Sie eine Beschreibung für das Team ein:");
-            var description = Console.ReadLine();
+            string beschreibung = Console.ReadLine();
 
             using (var context = new Context())
             {
-                Team newTeam = new Team() { Name = name, Description = description };
+                Team newTeam = new Team() { Name = name, Description = beschreibung };
                 context.Team.Add(newTeam);
                 context.SaveChanges();
             }
 
             Console.WriteLine();
-            Console.WriteLine("Team " + name + " wurde erfolgreich erstellt.");
+            Console.WriteLine("Team {0} wurde erfolgreich erstellt.", name);
             Console.WriteLine();
         }
     }

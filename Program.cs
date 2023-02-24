@@ -43,7 +43,7 @@ namespace PROG2_Arbeitsblaetter
                             teamController.CreateTeam();
                             break;
                         case 2:
-                            //FügeSpielerHinzu();
+                            playerController.CreatePlayer();
                             break;
                         case 3:
                             //ZeigeAlleTeams();
@@ -99,7 +99,7 @@ namespace PROG2_Arbeitsblaetter
             };
 
             PlayerController playerController = new PlayerController();
-            playerController.CreatePlayer(newPlayer);
+            //playerController.CreatePlayer(newPlayer);
 
             Console.WriteLine();
             Console.WriteLine("Spieler wurde erfolgreich hinzugefügt.");

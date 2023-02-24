@@ -29,5 +29,10 @@ namespace PROG2_Arbeitsblaetter
                 .HasForeignKey(p => p.TeamID)
                 .OnDelete(DeleteBehavior.Restrict);
         }
+
+        public Team FindByName(string name)
+        {
+            return this.Team.FirstOrDefault(t => t.Name == name);
+        }
     }
 }
