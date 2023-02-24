@@ -73,5 +73,36 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
             }
             Console.WriteLine();
         }
+
+        public void UpdateTeam()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Geben Sie den Namen des zu bearbeitenden Teams ein:");
+            string name = Console.ReadLine();
+
+            using (Context context = new Context())
+            {
+                Team team = context.FindTeamByName(name);
+                if (team != null)
+                {
+                    Console.WriteLine("Geben Sie den neuen Namen des Teams ein (oder drücken Sie Enter, um den aktuellen Namen beizubehalten):");
+                    string teamName = Console.ReadLine();
+                    if (!string.IsNullOrWhiteSpace(teamName))
+                    {
+                        team.Name = teamName;
+                    }
+
+                    Console.WriteLine("Geben Sie die neue Beschreibung des Teams ein (oder drücken Sie Enter, um die aktuelle Beschreibung beizubehalten):");
+                    string beschreibung = Console.ReadLine();
+                    if (!string.IsNullOrWhiteSpace(beschreibung))
+                    {
+                        team.Description = beschreibung;
+                    }
+
+                    context.SaveChanges();
+                }
+            }
+            Console.WriteLine();
+        }
     }
 }
