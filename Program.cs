@@ -58,7 +58,7 @@ namespace PROG2_Arbeitsblaetter
                             teamController.DeleteTeam();
                             break;
                         case 7:
-                            //PasseTeamAn();
+                            teamController.UpdateTeam();
                             break;
                         case 8:
                             //PasseSpielerAn();
