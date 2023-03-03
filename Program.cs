@@ -34,9 +34,11 @@ namespace PROG2_Arbeitsblaetter
                 Console.Write("Option: ");
 
                 string input = Console.ReadLine();
+                Console.Clear();
 
                 if (int.TryParse(input, out var option))
                 {
+                    Console.WriteLine("-----------------------------------------------------------------------------");
                     switch (option)
                     {
                         case 1:
@@ -69,6 +71,11 @@ namespace PROG2_Arbeitsblaetter
                             Console.WriteLine("Ungültige Option.");
                             break;
                     }
+                    Console.WriteLine("-----------------------------------------------------------------------------");
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
+                    Console.WriteLine();
                 } else
                 {
                     Console.WriteLine("Ungültige Option.");
