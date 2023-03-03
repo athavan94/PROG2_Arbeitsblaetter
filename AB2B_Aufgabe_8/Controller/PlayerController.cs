@@ -95,7 +95,7 @@ namespace PROG2_Arbeitsblaetter.AB2B_Aufgabe_8.Controller
                 }
                 else
                 {
-                    Console.WriteLine("Spieler mit dem Namen {0} wurde nicht gefunden.", player.Name);
+                    Console.WriteLine("Spieler mit dem Namen {0} wurde nicht gefunden.", name);
                 }
             }
             Console.WriteLine();
