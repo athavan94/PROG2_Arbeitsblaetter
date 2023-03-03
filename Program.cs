@@ -8,8 +8,6 @@ namespace PROG2_Arbeitsblaetter
 {
     class Program
     {
-        static List<Player> players = new List<Player>();
-
         static void Main(string[] args)
         {
             TeamController teamController = new TeamController();
