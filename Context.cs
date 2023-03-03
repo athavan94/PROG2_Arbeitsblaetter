@@ -28,6 +28,32 @@ namespace PROG2_Arbeitsblaetter
                 .WithMany(t => t.Player)
                 .HasForeignKey(p => p.TeamID)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Team>().HasData(
+                new Team { ID = 1, Name = "Manchester United", Description = "Das beste Team der Welt!" },
+                new Team { ID = 2, Name = "Chelsea", Description = "Gibt zu viel Geld aus :D" }
+            );
+
+            modelBuilder.Entity<Player>().HasData(
+                new Player
+                {
+                    ID = 1,
+                    Name = "Rashford",
+                    Vorname = "Marcus",
+                    Nationalität = "England",
+                    Position = "Linksaussen",
+                    TeamID = 1
+                },
+                new Player
+                {
+                    ID = 2,
+                    Name = "Pedri",
+                    Vorname = "",
+                    Nationalität = "Spanien",
+                    Position = "Zentrales Mittelfeld",
+                    TeamID = 2
+                }
+            );
         }
 
         public Team FindTeamByName(string name)
