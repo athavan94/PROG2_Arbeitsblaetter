@@ -17,3 +17,8 @@ Der Ablauf wird sich im laufe des Projektes herauskristalisieren.
 
 ## Klassendiagramm
 ![Klassendiagramm](/Klassendiagramm.png "Klassendiagramm")
+
+## Entity Framework
+
+- Migration Erstellen `Add-Migration [NAME DER MIGRATION]`
+- Migration ausführen `Update-Database`
